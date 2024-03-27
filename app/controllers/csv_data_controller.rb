@@ -1,6 +1,6 @@
 class CsvDataController < ApplicationController
   def index
-    @csv_data = CSV.read(Rails.root.join('public','Table_input.csv'), headers: true)
+    @csv_data = CSV.read(Rails.root.join('public','./Table_Input.csv'), headers: true)
 
     @alpha = operation_result('A5','A20','+')
     @beta = operation_result('A15','A7','/')
